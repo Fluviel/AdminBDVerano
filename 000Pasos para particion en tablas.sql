@@ -14,10 +14,10 @@ CREATE TABLE product (
 PARTITION BY RANGE (price);
 -- Crear las particiones y establecer los rangos--
 CREATE TABLE product_partition_1 PARTITION OF product
-    FOR VALUES FROM (1.00) TO (3000.99);
+    FOR VALUES FROM (1.00) TO (3000.00);
 
 CREATE TABLE product_partition_2 PARTITION OF product
-    FOR VALUES FROM (3000.01) TO (6000.99);
+    FOR VALUES FROM (3000.01) TO (6000.00);
 
 CREATE TABLE product_partition_3 PARTITION OF product
     FOR VALUES FROM (6000.01) TO (10000.00);
